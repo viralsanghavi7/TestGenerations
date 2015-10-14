@@ -679,7 +679,7 @@ function makeNotEqual(rightHand) {
 
     if (rightHand === "undefined")
         return 1;
-    if (rightHand.charCodeAt(0) >= 48 && rightHand.charCodeAt(0) <= 67) {
+    if ((rightHand.charCodeAt(0) >= 48 && rightHand.charCodeAt(0) <= 67) || (rightHand.charCodeAt(0) == 45)){
         value = rightHand - 1;
     } else {
         value = rightHand.substring(0, rightHand.length - 1).concat("xyz").concat("\"");
